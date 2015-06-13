@@ -1,0 +1,11 @@
+ /**
+  * PluginName: Comprehensive Appearance Admin
+  * CSS file:   caa-style.css
+  */
+
+
+.customize-support #menu-appearance a[href="themes.php?page=custom-header"],
+.customize-support #menu-appearance a[href="themes.php?page=custom-background"] {
+
+	display: block;
+}

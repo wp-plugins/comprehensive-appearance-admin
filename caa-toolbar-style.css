@@ -1,0 +1,11 @@
+ /**
+  * PluginName: Comprehensive Appearance Admin
+  * CSS file:   caa-toolbar-style.css
+  */
+
+
+.customize-support #wpadminbar .hide-if-customize,
+.customize-support .hide-if-customize {
+
+	display: block;
+}
