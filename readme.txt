@@ -15,9 +15,21 @@ Display a better, comprehensive Appearance Menu in the Dashboard and in the fron
 
 Tested to Menu Customizer 0.6-20150618 and WordPress 4.3-alpha-32850.
 
+The link directly to the menu customizer is non-functional pending the final 4.3 implementation
+
 == Installation ==
 
+Download the plugin zip file
+
+Upload via dashboard > plugins > add new > upload
+
+Activate the plugin
+
 == Screenshots ==
+
+1. The toolbar appearance menu
+
+2. The dashboard appearance menu
 
 == Changelog ==
 
@@ -34,4 +46,3 @@ Tested to Menu Customizer 0.6-20150618 and WordPress 4.3-alpha-32850.
 * Original release
 
 == Upgrade Notice ==
-
