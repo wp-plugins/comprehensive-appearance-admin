@@ -3,7 +3,7 @@
   * Plugin Name: Comprehensive Appearance Admin
   * Plugin URI:  http://wpmulti.org/comprehensive-appearance-admin
   * Description: Display a better, comprehensive Appearance Menu in the Dashboard and in the front-end Toolbar.
-  * Version:     0.1.2
+  * Version:     0.1.3
   * Author:      Martin Robbins
   * Author URI:  http://wpmulti.org
   * License:     GPL2 or later
@@ -14,6 +14,7 @@
 // Add Dashboard Customize items for Themes, Widgets, Menus,
 add_action ( '_admin_menu', 'caa_add_customize_submenus', 999 );
 function caa_add_customize_submenus() {
+	
 
 	global $submenu;
 	global $customize_url;
@@ -32,9 +33,13 @@ function caa_add_customize_submenus() {
 	endif;
 
 	// Add a Customize Menus menu item
+	// as of 3 jul7 2015 the core url is
+	// http://beta.wpmulti.org/wp-admin/customize.php?autofocus[panel]=nav_menus&return=%2Fwp-admin%2Fnav-menus.php%3Faction%3Dedit%26menu%3D0
+
 	if ( current_theme_supports( 'menus' ) ) {
-		$customize_menus_url = add_query_arg( array( 'autofocus' => array( 'panel' => 'menus' ) ), $customize_url );
+//		$customize_menus_url = add_query_arg( array( 'autofocus' => array( 'panel' => 'menus' ) ), $customize_url );
 //		$customize_menus_url = add_query_arg( array( 'autofocus' => array( 'section' => 'menus' ) ), $customize_url );
+		$customize_menus_url = add_query_arg( array( 'autofocus' => array( 'panel' => 'nav_menus' ) ), $customize_url );
 		$submenu['themes.php']['21.3'] = array( __( 'Customize Menus' ), 'customize', esc_url( $customize_menus_url ), '', 'hide-if-no-customize' );	
 	}
 
@@ -146,8 +151,9 @@ function caa_add_customize_menus_node( $wp_admin_bar ) {
 	$customize_url = admin_url( 'customize.php' ) ;
 	
 	if ( current_theme_supports( 'menus' ) && current_user_can( 'customize')  ) {
-		$customize_menus_url = add_query_arg( array( 'autofocus' => array( 'panel' => 'menus' ) ), $customize_url );
+//		$customize_menus_url = add_query_arg( array( 'autofocus' => array( 'panel' => 'menus' ) ), $customize_url );
 //		$customize_menus_url = add_query_arg( array( 'autofocus' => array( 'section' => 'menus' ) ), $customize_url );
+		$customize_menus_url = add_query_arg( array( 'autofocus' => array( 'panel' => 'nav_menus' ) ), $customize_url );
 		$args = array(
 			'parent'=> 'appearance',
 //			'parent'=> 'caa-customize',

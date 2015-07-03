@@ -4,7 +4,7 @@ Donate link:
 Tags: appearrance menu, dashboard appearance menu, toolbar appearance menu, admin appearance pages, dashboard appearance pages, custom header page, custom background page, widgets page, menus page, menu customizer
 Requires at least: 3.0
 Tested up to: 4.2.2
-Stable tag: 0.1.2
+Stable tag: 0.1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,9 +13,9 @@ Display a better, comprehensive Appearance Menu in the Dashboard and in the fron
 == Description ==
 Display a better, comprehensive Appearance Menu in the Dashboard and in the front-end Toolbar.
 
-Tested to Menu Customizer 0.6-20150618 and WordPress 4.3-alpha-32850.
+Where they are not present, adds links to the various customizer sections/panels and to the corresponding old-school admin appearance pages. 
 
-The link directly to the menu customizer is non-functional pending the final 4.3 implementation
+Tested to WordPress 4.3-beta1-33054.
 
 == Installation ==
 
@@ -32,6 +32,9 @@ Activate the plugin
 2. The dashboard appearance menu
 
 == Changelog ==
+
+= 0.1.3 =
+* Corrected both links directly to the customizer nav_menu panel now that its url has been redefined in 4.3-beta1
 
 = 0.1.2 =
 * Add all links explicitly as new instead of CSS-unhiding the existing core links
